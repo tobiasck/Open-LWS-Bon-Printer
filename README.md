@@ -12,7 +12,7 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
     ```
     wget https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
     ```
-    
+    oder
     ```
     git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
     ```
