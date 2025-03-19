@@ -9,23 +9,23 @@ Um diesen Print mit Sensoren zu triggern, wurde ein Python Script geschrieben, w
 
 ## Installieren der Bon-Drucker Software auf einem Raspberry PI
 1. Download des Repositorys
-  ```
-  wget https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
-  ```
-
-  ```
-  git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
-  ```
+    ```
+    wget https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
+    ```
+    
+    ```
+    git clone https://github.com/JonasSchmalzhaf/Open-LWS-Bon-Printer.git
+    ```
 
 2. Rechte für install.sh vergeben
-   ```
-   sudo chmod 775 install.sh
-   ```
+    ```
+    sudo chmod 775 install.sh
+    ```
 
 3. Ausführen von install.sh
-  ```
-  ./install.sh
-  ```
+    ```
+    ./install.sh
+    ```
 
 ## Erläuterungen für evtl. Anpassungen
 Die [Bixolon Command Page](https://www.bixolon.com/_upload/manual/Manual_Command_Thermal_POS_Printer_ENG_V1.00[9].pdf) beinhaltet verschiedene Command zur allgemeinen Steuerung und Konfiguration des Druckers, wie z.B. Schrifftgröße, Auswahl der Code Tables, Text Ausrichtung, etc. Diesen Funktionen werden Hex-Werte zugeordnet um sie aus zu führen.
@@ -41,3 +41,5 @@ Dabei ist wichtig das für **/dev/usb/lp0** der richtige USB Port gewählt wird,
 Mit **echo -e** können jedoch auch "normale" Strings versendet werden. Dabei ist zu beachten das sonder Zeichen (ä, ö, ü, ß) vom Drucker nicht richtig gedurckt werden. Also muss für diese Zeichen der entsprechende Code aus der Code Page eingefügt werden.
 
 Außerdem ist beim Drucken zu beachten, dass der Drucker maximal 24 Zeichen breit drucken kann (bei doppelter Schrifftgröße). Nach diesen 24 Zeichen bricht der Drucker die Zeile automatisch um.
+
+Das Layouts des Kassenzettels ist im **OpenLWS.sh** Skript anzupassen (siehe auch Code Kommentare).
